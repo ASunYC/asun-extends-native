@@ -1,4 +1,4 @@
-require('../../src/index');
+require('../../src/linq-array/index.ts');
 const assert = require('assert');
 
 describe('LinqArray', function () {

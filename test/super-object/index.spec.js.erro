@@ -1,6 +1,6 @@
 Object.merge = Object.entries = Object.values = Object.forEach = undefined;
 
-require('../../src/index');
+require('../../src/super-object/index.ts');
 const assert = require('assert');
 
 describe('SuperObject', function () {
