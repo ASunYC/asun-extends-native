@@ -1,0 +1,42 @@
+{
+  "name": "@asun01/asun-extend-native",
+  "version": "0.0.1",
+  "description": "Extended Lib For Objects",
+  "main": "index.js",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
+  },
+  "scripts": {
+    "test": "mocha test\\**\\*.test.js",
+    "build": "shx rm -rf dist && npx rollup -c && shx cp package.json LICENSE README.md dist/",
+    "publish": "npm run build && cd dist && npm publish & cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ASunYC/asun-extends-native"
+  },
+  "keywords": [
+    "asun01"
+  ],
+  "author": "asun01",
+  "license": "Apache-2.0",
+  "typings": "index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.23",
+    "mocha": "^9.1.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "rollup": "^2.79.0",
+    "rollup-plugin-typescript2": "^0.33.0",
+    "typescript": "^4.8.2",
+    "shx": "^0.3.4"
+  }
+}
