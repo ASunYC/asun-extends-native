@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "mocha test\\**\\*.spec.js",
-    "build": "shx rm -rf dist && npx rollup -c && shx cp package.json LICENSE README.md dist/",
+    "build": "shx rm -rf dist && npx rollup -c && shx cp package.json LICENSE README.md dist/ && npm run build0",
+    "build0": "shx cp src/linq-array/index.d.ts dist/linq-array/ && shx cp src/super-date/index.d.ts dist/super-date/ && shx cp src/super-object/index.d.ts dist/super-object/",
     "publish": "npm run build && cd dist && npm publish & cd .."
   },
   "repository": {
