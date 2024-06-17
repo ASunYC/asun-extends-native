@@ -16,6 +16,8 @@ interface Date {
      * - Q/QQ: quater
      */
     format: (pattern?: string) => string;
+
+    formatExt: (pattern?: string) => string;
 }
 
 interface DateConstructor {

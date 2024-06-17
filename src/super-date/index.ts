@@ -18,6 +18,28 @@ Date.prototype.format = function (pattern: string = 'YYYY-MM-DD hh:mm:ss') {
         })
 }
 
+Date.prototype.formatExt = function (pattern: string = 'YYYY-MM-DD hh:mm:ss') {
+    let Y = this.getFullYear().toString();
+    let M = (this.getMonth() + 1).toString().padStart(2, '0');
+    let D = this.getDate().toString().padStart(2, '0');
+    let h = this.getHours().toString().padStart(2, '0');
+    let m = this.getMinutes().toString().padStart(2, '0');
+    let s = this.getSeconds().toString().padStart(2, '0');
+
+    // 使用一个对象来映射模式中的占位符到实际的日期时间部分
+    const replacements: { [key: string]: string } = {
+        'YYYY': Y,
+        'MM': M,
+        'DD': D,
+        'hh': h, // 注意：这里使用的小写 'hh' 对应于12小时制的小时数
+        'mm': m,
+        'ss': s,
+    };
+
+    // 使用String.prototype.replace方法替换模式中的占位符
+    return pattern.replace(/(YYYY|MM|DD|hh|mm|ss)/g, (match) => replacements[match] || match);
+}
+
 Date.today = function () {
     let now = new Date();
     return new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
