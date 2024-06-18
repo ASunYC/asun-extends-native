@@ -19,6 +19,11 @@ describe('SuperDate', function () {
         assert.equal(new Date(2016, 9, 4, 1, 2, 13, 456).format('yy-M-d h:m:s q'), '16-10-4 1:2:13 4');
     });
 
+    it('formatExt', function () {
+        assert.equal(new Date(2016, 0, 1).formatExt(), '2016-01-01 00:00:00');
+        console.log(new Date().formatExt('YYYYMMDD-hhmmss'));
+    });
+
     it('today', function () {
         const today = new Date();
         const expected = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()} 00:00:00 0`;
