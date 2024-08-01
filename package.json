@@ -1,6 +1,6 @@
 {
   "name": "@asun01/asun-extend-native",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "Extended Lib For Objects",
   "main": "index.js",
   "exports": {
@@ -17,7 +17,7 @@
     "build0": "shx cp src/linq-array/index.d.ts dist/linq-array/ && shx cp src/super-date/index.d.ts dist/super-date/ && shx cp src/super-object/index.d.ts dist/super-object/",
     "build:dts": "npx tsc && npx api-extractor run --local --verbose",
     "build:doc": "npx api-documenter markdown --input temp --output docs/api",
-    "pub": "npm publish"
+    "pub": "cd dist && npm publish"
   },
   "repository": {
     "type": "git",
