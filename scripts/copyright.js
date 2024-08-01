@@ -1,7 +1,10 @@
+let _package = require('../package.json');
 module.exports = `/*!
- * ASUN-EXTENDS-NATIVE v${require('../package.json').version}
- * -----------------------------------------
- * Copyright (c) asun01.
- * Apache-2.0 License
- * https://github.com/ASunYC/asun-extends-native
+ * ${_package.name} v${_package.version}
+ * ------------------------------------------------------------------------------------
+ * Copyright (c) ${_package.author}.
+ * ${_package.license} License
+ * https://github.com/ASunYC/db-async
+ * ${_package.description}
+ * ------------------------------------------------------------------------------------
  */`
