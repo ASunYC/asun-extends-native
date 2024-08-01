@@ -1,6 +1,6 @@
 {
   "name": "@asun01/asun-extend-native",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Extended Lib For Objects",
   "main": "index.js",
   "exports": {
