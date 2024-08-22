@@ -1,6 +1,6 @@
 {
   "name": "@asun01/asun-extend-native",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Extended Lib For Objects Native",
   "main": "index.js",
   "exports": {
@@ -11,7 +11,7 @@
     "test": "jest",
     "watch": "jest --watchAll",
     "coverage": "jest --coverage",
-    "build": "npm run clean && npx rollup -c && npm run build:doc && shx cp package.json LICENSE README.md dist/ && npm run build0",
+    "build": "npm run clean && npx rollup -c && npm run build:doc && shx cp LICENSE README.md dist/ && node ./scripts/publish.js && npm run build0",
     "clean": "shx rm -rf dist && shx rm -rf lib && shx rm -rf docs/api",
     "build0": "shx cp src/linq-array/index.d.ts dist/linq-array/ && shx cp src/super-date/index.d.ts dist/super-date/ && shx cp src/super-object/index.d.ts dist/super-object/",
     "build:dts": "npx tsc && npx api-extractor run --local --verbose",
